@@ -1,0 +1,14 @@
+.w-128 {
+    width: 20rem;
+}
+.-mb-2px {
+    margin: -2px;
+}
+.px-10 {
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
+#bio p + p {
+    margin-top: 0.4em; /* Adds spacing only to paragraphs that follow other paragraphs */
+}
