@@ -1,0 +1,272 @@
+# ==============================================================================
+# .gitattributes — Line Endings, Diff Drivers, Linguist & Archive Policy
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. Default Auto-Detection & Unix LF Normalization
+# ------------------------------------------------------------------------------
+* text=auto eol=lf
+
+# ------------------------------------------------------------------------------
+# 2. Web Documents, Stylesheets & Client/Server Scripts
+# ------------------------------------------------------------------------------
+*.html          text eol=lf diff=html
+*.htm           text eol=lf diff=html
+*.xhtml         text eol=lf diff=html
+
+*.css           text eol=lf diff=css
+*.scss          text eol=lf diff=css
+*.sass          text eol=lf diff=css
+*.less          text eol=lf diff=css
+*.pcss          text eol=lf diff=css
+
+*.js            text eol=lf
+*.cjs           text eol=lf
+*.mjs           text eol=lf
+*.jsx           text eol=lf
+*.ts            text eol=lf
+*.cts           text eol=lf
+*.mts           text eol=lf
+*.tsx           text eol=lf
+
+# ------------------------------------------------------------------------------
+# 3. Data Serialization, Package Manifests & Dotfiles
+# ------------------------------------------------------------------------------
+*.json          text eol=lf
+*.jsonc         text eol=lf
+*.json5         text eol=lf
+*.yml           text eol=lf
+*.yaml          text eol=lf
+*.toml          text eol=lf
+*.xml           text eol=lf
+*.xsl           text eol=lf
+*.xslt          text eol=lf
+*.xsd           text eol=lf
+*.plist         text eol=lf
+*.graphql       text eol=lf
+*.gql           text eol=lf
+*.ini           text eol=lf
+*.cfg           text eol=lf
+*.conf          text eol=lf
+*.properties    text eol=lf
+*.env*          text eol=lf
+
+.editorconfig     text eol=lf
+.gitattributes    text eol=lf
+.gitignore        text eol=lf
+.gitmodules       text eol=lf
+.mailmap          text eol=lf
+.nojekyll         text eol=lf
+.dockerignore     text eol=lf
+.npmignore        text eol=lf
+.eslintignore     text eol=lf
+.prettierignore   text eol=lf
+.stylelintignore  text eol=lf
+
+# ------------------------------------------------------------------------------
+# 4. Documentation, Prose & Academic Markup
+# ------------------------------------------------------------------------------
+*.md            text eol=lf diff=markdown linguist-documentation
+*.markdown      text eol=lf diff=markdown linguist-documentation
+*.mdown         text eol=lf diff=markdown linguist-documentation
+*.mkd           text eol=lf diff=markdown linguist-documentation
+*.mdx           text eol=lf diff=markdown linguist-documentation
+*.rst           text eol=lf linguist-documentation
+*.adoc          text eol=lf linguist-documentation
+*.txt           text eol=lf linguist-documentation
+*.tex           text eol=lf diff=tex
+*.sty           text eol=lf diff=tex
+*.cls           text eol=lf diff=tex
+*.bib           text eol=lf diff=bibtex
+
+LICENSE*        text eol=lf
+NOTICE*         text eol=lf
+AUTHORS*        text eol=lf
+CHANGELOG*      text eol=lf linguist-documentation
+CONTRIBUTING*   text eol=lf linguist-documentation
+CODE_OF_CONDUCT* text eol=lf linguist-documentation
+SECURITY*       text eol=lf linguist-documentation
+
+# ------------------------------------------------------------------------------
+# 5. Shell, Build Systems & Polyglot Source Files
+# ------------------------------------------------------------------------------
+# POSIX shell scripts and Makefiles require LF even on Windows hosts
+*.sh            text eol=lf diff=bash
+*.bash          text eol=lf diff=bash
+*.zsh           text eol=lf diff=bash
+*.ksh           text eol=lf diff=bash
+*.fish          text eol=lf
+configure       text eol=lf diff=bash
+Makefile        text eol=lf
+makefile        text eol=lf
+GNUmakefile     text eol=lf
+BSDmakefile     text eol=lf
+*.mk            text eol=lf
+*.mak           text eol=lf
+CMakeLists.txt  text eol=lf
+*.cmake         text eol=lf
+Dockerfile*     text eol=lf
+Containerfile*  text eol=lf
+
+# Windows batch, PowerShell & Visual Studio files require CRLF
+*.bat           text eol=crlf
+*.cmd           text eol=crlf
+*.ps1           text eol=crlf
+*.psm1          text eol=crlf
+*.psd1          text eol=crlf
+*.vbs           text eol=crlf
+*.reg           text eol=crlf
+*.sln           text eol=crlf
+*.vcxproj       text eol=crlf
+*.props         text eol=crlf
+*.targets       text eol=crlf
+
+# Systems & scripting languages
+*.c             text eol=lf diff=cpp
+*.h             text eol=lf diff=cpp
+*.cpp           text eol=lf diff=cpp
+*.hpp           text eol=lf diff=cpp
+*.cc            text eol=lf diff=cpp
+*.hh            text eol=lf diff=cpp
+*.cxx           text eol=lf diff=cpp
+*.hxx           text eol=lf diff=cpp
+*.rs            text eol=lf diff=rust
+*.py            text eol=lf diff=python
+*.pyi           text eol=lf diff=python
+*.go            text eol=lf diff=golang
+*.sql           text eol=lf
+
+# Patches & diffs must preserve exact whitespace
+*.diff          text eol=lf -whitespace
+*.patch         text eol=lf -whitespace
+
+# ------------------------------------------------------------------------------
+# 6. Vector Graphics, Vendored Assets, Lockfiles & Bundled Artifacts
+# ------------------------------------------------------------------------------
+*.svg                   text eol=lf
+assets/SOM_horiz_Web_*.svg text eol=lf linguist-vendored
+
+package-lock.json       text eol=lf linguist-generated
+npm-shrinkwrap.json     text eol=lf linguist-generated
+yarn.lock               text eol=lf linguist-generated
+pnpm-lock.yaml          text eol=lf linguist-generated
+Cargo.lock              text eol=lf linguist-generated
+
+*.min.js                text eol=lf linguist-generated -diff
+*.min.css               text eol=lf linguist-generated -diff
+*.bundle.js             text eol=lf linguist-generated -diff
+*.map                   text eol=lf linguist-generated -diff
+
+# ------------------------------------------------------------------------------
+# 7. Binary Assets (Disable Line-Ending Conversion & Text Diffs/Merges)
+# ------------------------------------------------------------------------------
+# Raster images, icons & design sources
+*.png           binary
+*.jpg           binary
+*.jpeg          binary
+*.jxl           binary
+*.gif           binary
+*.webp          binary
+*.avif          binary
+*.ico           binary
+*.cur           binary
+*.bmp           binary
+*.tif           binary
+*.tiff          binary
+*.heic          binary
+*.heif          binary
+*.psd           binary
+*.ai            binary
+*.eps           binary
+*.svgz          binary
+
+# Web & desktop fonts
+*.woff          binary
+*.woff2         binary
+*.ttf           binary
+*.otf           binary
+*.eot           binary
+
+# Audio & video media
+*.mp3           binary
+*.wav           binary
+*.ogg           binary
+*.oga           binary
+*.opus          binary
+*.flac          binary
+*.aac           binary
+*.m4a           binary
+*.mp4           binary
+*.m4v           binary
+*.webm          binary
+*.ogv           binary
+*.mov           binary
+*.avi           binary
+*.mkv           binary
+
+# Documents & spreadsheets
+*.pdf           binary
+*.doc           binary
+*.docx          binary
+*.xls           binary
+*.xlsx          binary
+*.ppt           binary
+*.pptx          binary
+*.odt           binary
+*.ods           binary
+*.odp           binary
+*.epub          binary
+
+# Archives & packages
+*.zip           binary
+*.tar           binary
+*.gz            binary
+*.tgz           binary
+*.bz2           binary
+*.xz            binary
+*.zst           binary
+*.lz4           binary
+*.7z            binary
+*.rar           binary
+*.br            binary
+*.jar           binary
+*.war           binary
+*.whl           binary
+*.deb           binary
+*.rpm           binary
+*.dmg           binary
+*.iso           binary
+
+# Compiled binaries, WebAssembly, databases & certificates
+*.wasm          binary
+*.pyc           binary
+*.pyo           binary
+*.pyd           binary
+*.class         binary
+*.o             binary
+*.obj           binary
+*.a             binary
+*.lib           binary
+*.so            binary
+*.dylib         binary
+*.dll           binary
+*.exe           binary
+*.msi           binary
+*.node          binary
+*.sqlite        binary
+*.sqlite3       binary
+*.db            binary
+*.p12           binary
+*.pfx           binary
+*.der           binary
+*.gpg           binary
+
+# ------------------------------------------------------------------------------
+# 8. Git Archive Export Exclusions (`git archive` / Release Tarballs)
+# ------------------------------------------------------------------------------
+.editorconfig     export-ignore
+.gitattributes    export-ignore
+.github           export-ignore
+.gitignore        export-ignore
+eslint.config.js  export-ignore
+test              export-ignore

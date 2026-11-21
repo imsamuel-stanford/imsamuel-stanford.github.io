@@ -1,2 +1,258 @@
-.idea
-.vscode
+# ==============================================================================
+# .gitignore — Comprehensive Ignore Rules
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. Operating System & Desktop Metadata
+# ------------------------------------------------------------------------------
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux & XDG
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ------------------------------------------------------------------------------
+# 2. IDEs, Editors & Developer Workspaces
+# ------------------------------------------------------------------------------
+# JetBrains IDEs (WebStorm, IntelliJ IDEA, CLion, PyCharm, RustRover, Fleet)
+.idea/
+.idea_modules/
+.fleet/
+*.iml
+*.ipr
+*.iws
+cmake-build-*/
+out/
+
+# Visual Studio Code, VSCodium, Cursor, Windsurf & Zed
+.vscode/
+.vscode-test/
+*.code-workspace
+.history/
+.ionide/
+.zed/
+
+# Vim / Neovim
+[._]*.s[a-v][a-z]
+!*.svg
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+Session.vim
+Sessionx.vim
+.netrwhist
+tags
+TAGS
+[._]*.un~
+
+# Emacs
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+.org-id-locations
+*_archive
+*_flymake.*
+/eshell/history
+/eshell/lastdir
+/elpa/
+*.rel
+/auto/
+.dir-locals.el.local
+
+# Sublime Text, Xcode, Eclipse, NetBeans & TextMate
+*.sublime-project
+*.sublime-workspace
+*.tmproj
+*.tmproject
+*.esproj
+.project
+.classpath
+.settings/
+nbproject/
+*.xcodeproj/
+*.xcworkspace/
+xcuserdata/
+
+# ------------------------------------------------------------------------------
+# 3. Local AI Assistants & Agent Scratchpads
+# ------------------------------------------------------------------------------
+.aider*
+.claude/
+CLAUDE.local.md
+.cursor/
+.windsurf/
+.gemini/
+.continue/
+.copilot/
+
+# ------------------------------------------------------------------------------
+# 4. Node.js, JavaScript & Package Managers
+# ------------------------------------------------------------------------------
+# Dependency directories
+node_modules/
+jspm_packages/
+web_modules/
+bower_components/
+
+# Yarn, pnpm & Bun caches/stores
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+.yarn-integrity
+.pnpm-store/
+
+# Logs & diagnostic dumps
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Tooling, linter & compiler caches
+.npm/
+.eslintcache
+.stylelintcache
+.prettiercache
+.htmlhintrc.cache
+.parcel-cache/
+.cache/
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+.node_repl_history
+*.tsbuildinfo
+.FuseBox/
+.dynamodb/
+.tern-port
+
+# ------------------------------------------------------------------------------
+# 5. Testing, Coverage, E2E & Profiling Artifacts
+# ------------------------------------------------------------------------------
+coverage/
+*.lcov
+.nyc_output/
+lib-cov/
+junit.xml
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
+cypress/videos/
+cypress/screenshots/
+isolate-*-v8.log
+*.cpuprofile
+*.heapsnapshot
+*.heapprofile
+
+# ------------------------------------------------------------------------------
+# 6. Build Outputs, Static Site Generators & Bundlers
+# ------------------------------------------------------------------------------
+dist/
+build/
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+.next/
+.nuxt/
+.output/
+.svelte-kit/
+.vercel/
+.netlify/
+.astro/
+.turbo/
+.vite/
+storybook-static/
+*.tgz
+
+# ------------------------------------------------------------------------------
+# 7. Environment Variables, Local Secrets & Credentials
+# ------------------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+!.env.sample
+!.env.template
+.dev.vars
+.envrc.local
+.direnv/
+.tool-versions.local
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt.local
+
+# ------------------------------------------------------------------------------
+# 8. Temporary, Backup, Patch Rejects & Crash Dumps
+# ------------------------------------------------------------------------------
+tmp/
+temp/
+.tmp/
+.temp/
+*.tmp
+*.temp
+*.bak
+*.backup
+*.old
+*.orig
+*.rej
+*.swp
+*.swo
+core
+core.*
+vgcore.*

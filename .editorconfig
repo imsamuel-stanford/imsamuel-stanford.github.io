@@ -1,0 +1,153 @@
+# ==============================================================================
+# .editorconfig — Cross-Editor Formatting & Encoding Specification
+# https://editorconfig.org
+# ==============================================================================
+
+root = true
+
+# ------------------------------------------------------------------------------
+# Global Defaults (UTF-8, Unix LF, 4-space indentation)
+# ------------------------------------------------------------------------------
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 4
+tab_width = 4
+
+# ------------------------------------------------------------------------------
+# Web Documents, Stylesheets & JavaScript / TypeScript
+# Matches index.html, assets/styles.css, assets/index.js, scripts/*, test/*
+# ------------------------------------------------------------------------------
+[*.{html,htm,xhtml,css,scss,sass,less,pcss,js,cjs,mjs,jsx,ts,cts,mts,tsx}]
+indent_style = space
+indent_size = 4
+
+# ------------------------------------------------------------------------------
+# Data Serialization, Package Manifests & Structured Configs
+# Matches package.json and standard JSON/YAML/TOML conventions
+# ------------------------------------------------------------------------------
+[*.{json,jsonc,json5,yml,yaml,toml,graphql,gql}]
+indent_style = space
+indent_size = 2
+
+[{.babelrc,.eslintrc,.prettierrc,.stylelintrc,.swcrc,.hintrc}]
+indent_style = space
+indent_size = 2
+
+# ------------------------------------------------------------------------------
+# XML & Hand-Authored Vector Graphics
+# ------------------------------------------------------------------------------
+[*.{xml,svg,xsl,xslt,xsd,plist}]
+indent_style = space
+indent_size = 2
+
+# Exported Stanford School of Medicine Adobe Illustrator SVG logos use tabs
+[assets/SOM_horiz_Web_*.svg]
+indent_style = tab
+indent_size = 4
+tab_width = 4
+
+# ------------------------------------------------------------------------------
+# Markdown, Plaintext & Prose Documentation
+# Preserve trailing double-spaces used for Markdown hard line breaks
+# ------------------------------------------------------------------------------
+[*.{md,markdown,mdown,mkd,mdx,rst,adoc}]
+indent_style = space
+indent_size = 2
+max_line_length = off
+trim_trailing_whitespace = false
+
+[*.txt]
+indent_style = space
+indent_size = 4
+max_line_length = off
+
+# ------------------------------------------------------------------------------
+# POSIX Shell Scripts & Container Definitions
+# ------------------------------------------------------------------------------
+[*.{sh,bash,zsh,ksh,fish}]
+end_of_line = lf
+indent_style = space
+indent_size = 4
+
+[{Dockerfile,Dockerfile.*,Containerfile,*.dockerfile}]
+end_of_line = lf
+indent_style = space
+indent_size = 4
+
+# ------------------------------------------------------------------------------
+# Windows Scripts & Visual Studio Project Files (CRLF Required)
+# ------------------------------------------------------------------------------
+[*.{bat,cmd,ps1,psm1,psd1,vbs}]
+end_of_line = crlf
+indent_style = space
+indent_size = 4
+
+[*.{sln,vcxproj,vcxproj.filters,props,targets}]
+end_of_line = crlf
+indent_style = space
+indent_size = 2
+
+# ------------------------------------------------------------------------------
+# Makefiles & Tab-Mandatory Languages
+# ------------------------------------------------------------------------------
+[{Makefile,makefile,GNUmakefile,BSDmakefile,*.mk,*.mak}]
+indent_style = tab
+indent_size = 4
+tab_width = 4
+
+[*.go]
+indent_style = tab
+indent_size = 4
+tab_width = 4
+
+[{go.mod,go.sum,go.work}]
+indent_style = tab
+indent_size = 4
+tab_width = 4
+
+# ------------------------------------------------------------------------------
+# Systems, Scientific & Scripting Languages (C/C++, Rust, Python, LaTeX, SQL)
+# ------------------------------------------------------------------------------
+[*.{c,h,cpp,hpp,cc,hh,cxx,hxx,cmake}]
+indent_style = space
+indent_size = 4
+
+[CMakeLists.txt]
+indent_style = space
+indent_size = 4
+
+[*.{rs,py,pyi,sql}]
+indent_style = space
+indent_size = 4
+
+[*.{tex,sty,cls,bib}]
+indent_style = space
+indent_size = 2
+
+# ------------------------------------------------------------------------------
+# Git, Ignore, Attribute & INI-Style Dotfiles
+# ------------------------------------------------------------------------------
+[{.editorconfig,.gitattributes,.gitignore,.gitmodules,.mailmap,.dockerignore,.npmignore,.eslintignore,.prettierignore,.stylelintignore,*.ini,*.cfg,*.conf,*.properties}]
+end_of_line = lf
+indent_style = space
+indent_size = 2
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# Zero-byte marker files
+[.nojekyll]
+end_of_line = lf
+insert_final_newline = false
+trim_trailing_whitespace = false
+
+# ------------------------------------------------------------------------------
+# Diffs & Patches (Whitespace Is Semantically Significant)
+# ------------------------------------------------------------------------------
+[*.{diff,patch}]
+end_of_line = lf
+insert_final_newline = false
+trim_trailing_whitespace = false

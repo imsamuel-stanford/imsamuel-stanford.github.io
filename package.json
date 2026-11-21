@@ -1,10 +1,14 @@
 {
   "name": "stanford-imsamuel",
-  "version": "0.0.1",
-  "description": "",
+  "version": "0.1.0",
+  "description": "Static files and progressive enhancements for Samuel Marks's Stanford website",
+  "type": "module",
   "main": "assets/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "update:github-stats": "node scripts/update-github-stats.js",
+    "github-stats": "node scripts/update-github-stats.js",
+    "test": "node --test --experimental-test-coverage test/index.test.js test/github-stats.test.js test/a11y.test.js",
+    "lint": "eslint assets/index.js scripts/update-github-stats.js test/index.test.js test/github-stats.test.js test/a11y.test.js eslint.config.js && tidy -q -e index.html"
   },
   "private": true
 }
